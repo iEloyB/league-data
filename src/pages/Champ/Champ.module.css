@@ -1,0 +1,81 @@
+.champContainer {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+
+  background-image: url(/loading.gif);
+  background-size: 10%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-color: #1f1f1f;
+}
+
+.champContainer::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  -webkit-box-shadow: inset 0px 0px 48px 32px rgba(0, 0, 0, 1);
+  -moz-box-shadow: inset 0px 0px 48px 32px rgba(0, 0, 0, 1);
+  box-shadow: inset 0px 0px 48px 32px rgba(0, 0, 0, 1);
+
+  animation: fadeIn 5s ease;
+}
+
+.skinsContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.skinsContainer > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.skinButtonsContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
+}
+
+.skinButtonsContainer > div {
+  font-size: 5em;
+  margin: 0.2em;
+
+  mix-blend-mode: exclusion;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+  user-select: none;
+
+  transition: 0.3s;
+}
+
+.skinButtonsContainer > div:hover {
+  cursor: pointer;
+}
+
+.skinButtonsContainer > div:active {
+  transform: scale(0.95);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
