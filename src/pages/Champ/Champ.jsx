@@ -22,6 +22,7 @@ const Champ = () => {
         setChampionData(champion);
       } catch (error) {
         console.error("Error fetching champion data:", error);
+        window.location.href = `/`;
       }
     };
 

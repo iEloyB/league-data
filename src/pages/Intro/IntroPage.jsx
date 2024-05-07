@@ -52,7 +52,6 @@ function Intro() {
     }
   }
 
-  // Utility function to shuffle array elements randomly
   function shuffleArray(array) {
     const shuffledArray = [...array];
     for (let i = shuffledArray.length - 1; i > 0; i--) {
@@ -67,7 +66,6 @@ function Intro() {
 
   return (
     <article className={styles.mainWrapper}>
-      {/* Sección 1 */}
       <section className={`${styles.imagesWrapper} ${styles.topAnimation}`}>
         {randomChampions.slice(0, 5).map((champion) => (
           <ChampCard
@@ -78,7 +76,6 @@ function Intro() {
         ))}
       </section>
 
-      {/* Sección 2 */}
       <section className={`${styles.imagesWrapper} ${styles.bottomAnimation}`}>
         {randomChampions.slice(5, 10).map((champion) => (
           <ChampCard
@@ -89,7 +86,6 @@ function Intro() {
         ))}
       </section>
 
-      {/* Sección 3 */}
       <section className={`${styles.imagesWrapper} ${styles.topAnimation}`}>
         {randomChampions.slice(10, 15).map((champion) => (
           <ChampCard
@@ -100,7 +96,6 @@ function Intro() {
         ))}
       </section>
 
-      {/* Sección 4 */}
       <section className={`${styles.imagesWrapper} ${styles.bottomAnimation}`}>
         {randomChampions.slice(15, 20).map((champion) => (
           <ChampCard
@@ -111,7 +106,6 @@ function Intro() {
         ))}
       </section>
 
-      {/* Sección 5 */}
       <section className={`${styles.imagesWrapper} ${styles.topAnimation}`}>
         {randomChampions.slice(20, 25).map((champion) => (
           <ChampCard
