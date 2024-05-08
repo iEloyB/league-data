@@ -1,3 +1,15 @@
+@font-face {
+  font-family: "BeaufortforLOL-Medium";
+  src: local("BeaufortforLOL-Medium"),
+    url("/fonts/BeaufortforLOL-Medium.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "MarkPro";
+  src: local("MarkPro"), url("/fonts/MarkPro.otf") format("opentype");
+}
+
 * {
   margin: 0;
+  font-family: "BeaufortforLOL-Medium", sans-serif;
 }

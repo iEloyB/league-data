@@ -49,28 +49,35 @@ const Champ = () => {
   };
 
   return (
-    <div className={style.champContainer}>
-      {championData && (
-        <>
-          <div className={`${style.skinsContainer} ${style.panLeft}`}>
-            <img
-              key={skinIds[currentSkin]}
-              src={`https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champId}_${skinIds[currentSkin]}.jpg`}
-              alt={`${championData.name} Skin ${skinIds[currentSkin]}`}
-            />
-          </div>
+    <>
+      <div className={style.champContainer}>
+        {championData && (
+          <>
+            <div className={`${style.skinsContainer} ${style.panLeft}`}>
+              <img
+                key={skinIds[currentSkin]}
+                src={`https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champId}_${skinIds[currentSkin]}.jpg`}
+                alt={`${championData.name} Skin ${skinIds[currentSkin]}`}
+              />
+            </div>
 
-          <div className={style.skinButtonsContainer}>
-            <div className={style.prevSkin} onClick={handlePrevSkin}>
-              -
+            <div className={style.skinButtonsContainer}>
+              <div className={style.prevSkin} onClick={handlePrevSkin}>
+                -
+              </div>
+              <div className={style.nextSkin} onClick={handleNextSkin}>
+                +
+              </div>
             </div>
-            <div className={style.nextSkin} onClick={handleNextSkin}>
-              +
-            </div>
-          </div>
-        </>
-      )}
-    </div>
+          </>
+        )}
+      </div>
+      <div className={style.champInfo}>
+        {championData && <h1>{championData.name}</h1>}
+        <div className={style.bar}></div>
+        {championData && <h3>{championData.title}</h3>}
+      </div>
+    </>
   );
 };
 

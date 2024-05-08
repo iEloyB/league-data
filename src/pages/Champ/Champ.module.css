@@ -4,9 +4,9 @@
   height: 100vh;
 
   background-image: url(/loading.gif);
-  background-size: 10%;
+  background-size: 5%;
   background-repeat: no-repeat;
-  background-position: 50% 50%;
+  background-position: 50% 44%;
   background-color: #1f1f1f;
 }
 
@@ -29,12 +29,10 @@
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: center;
 }
 
 .skinsContainer > img {
   width: 100%;
-  height: 100%;
   object-fit: cover;
 }
 
@@ -70,6 +68,49 @@
   transform: scale(0.95);
 }
 
+.champInfo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  color: #c28f2c;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  z-index: 5;
+}
+
+.champInfo h1 {
+  text-transform: uppercase;
+  font-size: 3em;
+  font-weight: 100;
+
+  animation: fadeInFromBottom 2s ease;
+
+  text-shadow: 2px 2px 4px black;
+}
+
+.champInfo h3 {
+  animation: fadeInFromBottom 3s ease;
+  text-shadow: 2px 2px 4px black;
+  text-transform: uppercase;
+}
+
+.bar {
+  background-image: url("https://brand.riotgames.com/images/league-of-legends/decorator-hr.png");
+  width: 30%;
+  height: 2em;
+  background-size: 100%;
+
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  animation: fadeInFromBottom2 2s ease;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -77,5 +118,35 @@
 
   to {
     opacity: 1;
+  }
+}
+
+@keyframes fadeInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(15%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInFromBottom2 {
+  0% {
+    opacity: 0;
+    transform: translateY(0%);
+    background-size: 10%;
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(15%);
+    background-size: 10%;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    background-size: 100%;
   }
 }

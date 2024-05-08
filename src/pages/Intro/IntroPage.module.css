@@ -1,94 +1,94 @@
 .mainWrapper {
-    background-color: #1f1f1f;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-color: #1f1f1f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    gap: 2em;
+  gap: 5em;
 
-    width: 100vw;
-    height: 100vh;
+  width: 100vw;
+  height: 100vh;
 
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .imagesWrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 5em;
 }
 
 .imagesWrapper > div {
-    background-position: 50% 0%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    animation: imagesAnimation 4.5s ease-in-out;
-    animation-delay: 0s;
+  background-position: 50% 0%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: imagesAnimation 4.5s ease-in-out;
+  animation-delay: 0s;
 
-    opacity: 1;
-    width: 100vw;
-    height: 100vh;
+  opacity: 1;
+  width: 100vw;
+  height: 100vh;
 }
 
 .topAnimation {
-    animation: topBottom 6s ease;
-    animation-delay: 0s;
+  animation: topBottom 6s ease;
+  animation-delay: 0s;
 }
 
 .bottomAnimation {
-    animation: bottomTop 6s ease;
-    animation-delay: 0s;
+  animation: bottomTop 6s ease;
+  animation-delay: 0s;
 }
 
 @keyframes bottomTop {
-    0% {
-        transform: translateY(150%);
-    }
+  0% {
+    transform: translateY(150%);
+  }
 
-    100% {
-        transform: translateY(-10%);
-    }
+  100% {
+    transform: translateY(-10%);
+  }
 }
 
 @keyframes topBottom {
-    0% {
-        transform: translateY(-150%);
-    }
+  0% {
+    transform: translateY(-150%);
+  }
 
-    70% {
-        transform: translateY(0%);
-    }
+  70% {
+    transform: translateY(0%);
+  }
 
-    100% {
-        transform: translateY(0%);
-    }
+  100% {
+    transform: translateY(0%);
+  }
 }
 
 @keyframes imagesAnimation {
-    0% {
-        background-position: 50% 100%;
-        opacity: 1;
-        width: 15vw;
-        height: 15vh;
-    }
+  0% {
+    background-position: 50% 100%;
+    opacity: 1;
+    width: 15vw;
+    height: 15vh;
+  }
 
-    55% {
-        opacity: 1;
-        width: 25vw;
-        height: 25vh;
-    }
+  55% {
+    opacity: 1;
+    width: 25vw;
+    height: 25vh;
+  }
 
-    100% {
-        background-position: 50% 0%;
-        opacity: 1;
-        width: 100vw;
-        height: 100vh;
-    }
-    
-    1000% {
-        background-position: 50% 0%;
-        opacity: 1;
-        width: 100vw;
-        height: 100vh;
-    }
+  100% {
+    background-position: 50% 0%;
+    opacity: 1;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  1000% {
+    background-position: 50% 0%;
+    opacity: 1;
+    width: 100vw;
+    height: 100vh;
+  }
 }
